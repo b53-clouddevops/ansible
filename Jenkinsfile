@@ -7,6 +7,7 @@ pipeline {
         
         stage('Performing Lint Check') {
             steps {
+                sh "env"
                 sh "echo This step should run against non-main branches only"
                 sh "echo PERFORMING LINT CHECKS"
             }
