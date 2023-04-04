@@ -6,7 +6,7 @@ pipeline {
     stages {
 
         stage('Testing the tags') {
-            when { expression { env.TAG_NAME == ".*" } }
+            
             steps {
                 sh "env"
             }
@@ -30,7 +30,7 @@ pipeline {
         }
 
         stage('Promotion To Prod Branch') {       // This stage will run only against the main branch
-            when { branch 'main' }
+            when { expression { env.TAG_NAME == ".*" } }
             steps {
                 sh "env"
                 sh "echo main - PROMOTING To PROD"
