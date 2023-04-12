@@ -12,10 +12,16 @@
     name: common 
     tasks_from: create-user
 
+# - name: Calling Download and Extract Role From Common
+#   ansible.builtin.include_role:
+#     name: common 
+#     tasks_from: download
+
+
 - name: Calling Download and Extract Role From Common
   ansible.builtin.include_role:
     name: common 
-    tasks_from: download
+    tasks_from: download-from-nexus
 
 - name: Fetch the UID and replace it in the file 
   ansible.builtin.lineinfile:
