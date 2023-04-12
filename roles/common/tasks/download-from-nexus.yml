@@ -11,7 +11,7 @@
     mode: '0755'
   become_user: "{{APPUSER}}"
 
-- name: Download and extract from Nexus  
+- name: Downloading and extracting the artifacts from Nexus  
   ansible.builtin.unarchive:
     src: http://172.31.13.88:8081/repository/{{COMPONENT}}/{{COMPONENT}}-{{VERSION}}.zip
     dest: /home/{{APPUSER}}/{{COMPONENT}}/
