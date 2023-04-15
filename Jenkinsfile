@@ -30,7 +30,7 @@ pipeline {
                 sh "env"
                 sh "echo This step should run against non-main branches only"
                 sh "echo PERFORMING LINT CHECKSS"
-                sh "echo CHAOS ENGINEERING"
+                sh "echo CHAOS ENGINEERINGsadfdsf"
             }
         }
 
