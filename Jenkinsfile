@@ -7,7 +7,7 @@ pipeline {
 
         stage('Performing Main Branc') {
             steps {
-                sh "echo Running On Main Branch"
+                sh "echo Running On Main Branch Only"
             }
         }
     
