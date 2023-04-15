@@ -11,7 +11,7 @@ pipeline {
             }
         }
 
-        stage('Performing ABC') {
+        stage('Performing ABC Stage') {
             steps {
                 sh "echo Name Of The Stage Is ABC"
             }
