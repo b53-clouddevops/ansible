@@ -16,7 +16,13 @@ pipeline {
                 sh "echo Name Of The Stage Is ABC"
             }
         }
-    
+
+        stage('Performing Reviews Stage') {
+            steps {
+                sh "echo Name Of The Stage Is Reviews"
+            }
+        } 
+
         stage('Performing Lint Check') {
         when { branch pattern: "feature-.*", comparator: "REGEXP"}
             steps {
