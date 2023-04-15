@@ -4,6 +4,13 @@ pipeline {
         SSH_CREDENTIALS = credentials('SSH_CRED') 
     }    
     stages {
+
+        stage('Performing Main Branc') {
+            steps {
+                sh "Running On Main Branch"
+            }
+        }
+    
         stage('Performing Lint Check') {
         when { branch pattern: "feature-.*", comparator: "REGEXP"}
             steps {
