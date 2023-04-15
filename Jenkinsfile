@@ -7,6 +7,7 @@ pipeline {
 
         stage('Performing XYZ') {
             steps {
+                sh "env"
                 sh "echo Running On *** ${GIT_BRANCH} *** branch"
             }
         }
