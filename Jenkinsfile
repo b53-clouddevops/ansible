@@ -5,9 +5,9 @@ pipeline {
     }    
     stages {
 
-        stage('Performing Main Branc') {
+        stage('Performing XYZ') {
             steps {
-                sh "echo Running On  Main Branch Only At the Moment"
+                sh "echo Running On *** ${BRANCH_NAME} *** branch"
             }
         }
     
