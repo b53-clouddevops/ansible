@@ -10,6 +10,12 @@ pipeline {
                 sh "echo Running On ${env.GIT_BRANCH} branch"
             }
         }
+
+        stage('Performing ABC') {
+            steps {
+                sh "echo Name Of The Stage Is ABC"
+            }
+        }
     
         stage('Performing Lint Check') {
         when { branch pattern: "feature-.*", comparator: "REGEXP"}
