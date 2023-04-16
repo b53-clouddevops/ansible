@@ -12,7 +12,20 @@ pipeline {
                 sh "echo Blah Blah Blah"
             }
         }
-    
+
+        stage('Performing ABC Stage') {
+            steps {
+                sh "echo Name Of The Stage Is ABC"
+            }
+        }
+
+        stage('Performing Reviews Stage') {
+            steps {
+                sh "echo Name Of The Stage Is Reviews"
+                sh "echo Review Commit 3"
+            }
+        } 
+
         stage('Performing Lint Check') {
         when { branch pattern: "feature-.*", comparator: "REGEXP"}
             steps {
@@ -26,7 +39,7 @@ pipeline {
         when { branch pattern: "PR-.*", comparator: "REGEXP"}
             steps {
                 sh "env"
-                sh "ansible-playbook robot-dryrun.yaml -e COMPONENT=mongodb -e ansible_user=${SSH_CREDENTIALS_USR} -e ansible_password=${SSH_CREDENTIALS_PSW} -e ENV=qa"
+              //  sh "ansible-playbook robot-dryrun.yaml -e COMPONENT=mongodb -e ansible_user=${SSH_CREDENTIALS_USR} -e ansible_password=${SSH_CREDENTIALS_PSW} -e ENV=qa"
             }
         }
 
