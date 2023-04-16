@@ -32,10 +32,9 @@ pipeline {
             when { expression { env.TAG_NAME == ".*" } }
             steps {
                 sh "env"
+                sh "echo printing"
                 sh "echo main - PROMOTING To PRODUCTION"
             }
         }
     }
 }
-
-// git checkout main : Test
