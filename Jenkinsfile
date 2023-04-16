@@ -9,6 +9,7 @@ pipeline {
             steps {
                 sh "echo Running On ${env.GIT_BRANCH} branch"
                 sh "echo Branch name is ${GIT_BRANCH}"
+                sh "echo Blah Blah Blah"
             }
         }
     
@@ -21,7 +22,7 @@ pipeline {
             }
         }
 
-        stage('Performing Ansible Dry Run') {     // This stage I want to run it against a PR Only
+        stage('Performing Ansible Dry Run') {    
         when { branch pattern: "PR-.*", comparator: "REGEXP"}
             steps {
                 sh "env"
