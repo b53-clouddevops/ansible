@@ -32,7 +32,7 @@ pipeline {
             when { expression { env.TAG_NAME == ".*" } }
             steps {
                 sh "env"
-                sh "echo main - PROMOTING To PROD"
+                sh "echo main - PROMOTING To PRODUCTION"
             }
         }
     }
