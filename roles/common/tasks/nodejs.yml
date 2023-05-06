@@ -12,6 +12,14 @@
     name: common 
     tasks_from: create-user
 
+- name: Downloading the pem key
+  ansible.builtin.get_url:
+    url: https://s3.amazonaws.com/rds-downloads/rds-combined-ca-bundle.pem
+    dest: /home/roboshop
+    mode: '0440'
+    owner: roboshop 
+    group: roboshop 
+
 # As per the standard application artifacts should be downloaded only from Test Artifacts Only ( Nexus )
 # - name: Calling Download and Extract Role From Common
 #   ansible.builtin.include_role:
