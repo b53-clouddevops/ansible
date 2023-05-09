@@ -15,7 +15,7 @@
 - name: Downloading the pem key
   ansible.builtin.get_url:
     url: https://s3.amazonaws.com/rds-downloads/rds-combined-ca-bundle.pem
-    dest: /home/roboshop
+    dest: /home/roboshop/
     mode: '0440'
     owner: roboshop 
     group: roboshop 
