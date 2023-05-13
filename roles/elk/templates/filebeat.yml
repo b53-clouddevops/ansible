@@ -6,6 +6,9 @@ filebeat.inputs:
 
   paths:
     - /var/log/cart.log
+  fields: 
+    component: cart
+    logtype: json
 
 filebeat.config.modules:
   path: ${path.config}/modules.d/*.yml
