@@ -1,6 +1,5 @@
 filebeat.inputs:
-- type: filestream
-  id: my-filestream-id
+- type: log
 
   enabled: true
   json.keys_under_root: true
