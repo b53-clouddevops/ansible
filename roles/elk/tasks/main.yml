@@ -13,7 +13,7 @@
     name: logstash
     state: restarted       
 
-- name: Waitinf for the logstash port to come up
+- name: Waiting for the logstash port to come up
   ansible.builtin.wait_for:
     port: 5044
     delay: 30 
