@@ -29,3 +29,13 @@
   ansible.builtin.include_role:
     name: common 
     tasks_from: config-svc
+
+- name: Configuring Rsyslog            # This will configure the rules to route the logs to the intended file
+  ansible.builtin.include_role:
+    name: elk 
+    tasks_from: rsyslog
+
+- name: Installing filebeat          # This will install beats on all the servers.
+  ansible.builtin.include_role:
+    name: elk 
+    tasks_from: filebeat
