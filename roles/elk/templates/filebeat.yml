@@ -5,9 +5,9 @@ filebeat.inputs:
   json.keys_under_root: true
 
   paths:
-    - /var/log/cart.log
+    - "{{LOGLOCATION}}"
   fields: 
-    component: cart
+    component: "{{COMPONENT}}"
     logtype: json
 
 filebeat.config.modules:
