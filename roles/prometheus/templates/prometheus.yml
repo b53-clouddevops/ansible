@@ -16,7 +16,7 @@ scrape_configs:
 
   - job_name: 'ec2_nodes'            # Prometheus has IAM Role Addes, so prometheus server can describe the ec2 servers on us-east1 account
     ec2_sd_configs:
-      - region: eu-west-1
+      - region: us-east-1
         port: 9100
         filters:
         - name: "tag:prometheus-monitor"
