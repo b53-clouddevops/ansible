@@ -18,6 +18,10 @@ scrape_configs:
     ec2_sd_configs:
       - region: eu-west-1
         port: 9100
+        filters:
+        - name: "tag:prometheus-monitor"
+          values: ["yes" , "Yes" , "YES"]
+
 
 # I have hardcoded telling to monitor server -x and server -y by giving the IP Address of the servers.
 # What if if your servers comes up and destroys dynamically.
