@@ -16,3 +16,11 @@ scrape_configs:
   - job_name: "ws"
     static_configs:
       - targets: ["172.31.6.76:9100"]
+
+# I have hardcoded telling to monitor server -x and server -y by giving the IP Address of the servers.
+# What if if your servers comes up and destroys dynamically.
+
+# I want to monitor the nodes dynamically 
+# 1) Give a network range to be monitored 
+# 2) Since the machines are already on AWS, we can let our Premetheus Server Query the nodes and fetch the information.
+#    Monitor only the nodes that are having label as  ( prometheus-monitor : yes )
