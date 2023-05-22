@@ -54,5 +54,5 @@
 
 - name: Installing node_exporter          # This will install beats on all the servers.
   ansible.builtin.include_role:
-    name: node_exporter 
-    tasks_from: prometheus
+    name: prometheus
+    tasks_from: node_exporter
