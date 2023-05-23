@@ -56,3 +56,7 @@
     name: elk 
     tasks_from: filebeat
 
+- name: Installing node_exporter          # This will install beats on all the servers.
+  ansible.builtin.include_role:
+    name: prometheus
+    tasks_from: node_exporter
